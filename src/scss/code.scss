@@ -1,6 +1,41 @@
-.code{
+.code {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     // grid-template-columns: repeat(3, 1fr);
-    
+    background: #1b2b34;
+
+}
+
+.editor__header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 5px;
+    grid-gap: 5px;
+    background: rgba(0,0,0,0.1);
+}
+
+.editor{
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.editor__code{
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.editor__number{
+    display: block;
+    padding: 0 10px;
+}
+
+.editor__input{
+    resize: none;
+    font-family: 'Titillium Web', sans-serif;
+    background: none;
+    border:0;
+    color:grey;
+    font-style: 1rem;
+    line-height: 1.20rem;
 }
