@@ -1,40 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Site title</title>
-    <meta name="description" content="Description" />
 
-    <!-- Title -->
-    <meta property="og:title" content="" />
-    <!-- OPTIONAL description. 2-4 sentences. -->
-    <meta property="og:description" content="" />
-    <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
-    <meta property="og:url" content="" />
-    <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
-    <meta property="og:image" content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Re-creating page of Codepen with CssGrid</title>
+  <meta name="description" content="Description" />
 
-    <link rel="manifest" href="manifest.json" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <link
-      rel="apple-touch-icon"
-      sizes="192x192"
-      href="assets/pwa/icons/icon-192x192.png"
-    />
+  <!-- Title -->
+  <meta property="og:title" content="" />
+  <!-- OPTIONAL description. 2-4 sentences. -->
+  <meta property="og:description" content="" />
+  <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
+  <meta property="og:url" content="" />
+  <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
+  <meta property="og:image" content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      href="assets/pwa/icons/icon-192x192.png"
-    />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="apple-touch-icon" sizes="192x192" href="assets/pwa/icons/icon-192x192.png" />
 
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
-    <h1>Hello world - with simple PWA support!</h1>
+  <link rel="icon" type="image/png" href="assets/pwa/icons/icon-192x192.png" />
 
-    <script src="js/main.js"></script>
-  </body>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <div class="codepen">
+    <header class="pen">
+      <div class="pen__details">
+        <h1 class="pen__title">Some Amazing Pen Name</h1>
+        <p class="pen__author">A Pen by Ania Włodek</p>
+      </div>
+      <button class="button button--dirty">☁️Save</button>
+      <button class="button">☁️Save as private</button>
+      <button class="button">⚙️ Settings</button>
+      <button class="button">👀 Change View</button>
+      <img src="./assets/img/ja.jpg" alt="Karolina Kulinska" height="44">
+    </header>
+    <section class="code">
+      <div class="editor">
+        <header class="editor__header">
+          <button class=" button button--small editor__settings ">⚙️</button>
+          <h3 class="editor__heading">HTML</h3>
+          <button class=" button button--small editor__settings ">&#8964</button>
+        </header>
+        <div class="editor__code">
+          <div class="editor__gutter">
+            <span class="editor__number">1</span>
+          </div>
+          <textarea class="editor__input"><p>OH hey there !</p></textarea>
+        </div>
+      </div>
+      <div class="editor">
+        <header class="editor__header">
+          <button class="button button--small editor__settings">⚙️</button>
+          <h3 class="editor__heading">CSS</h3>
+          <button class="button button--small editor__settings">&#8964</button>
+        </header>
+        <div class="editor__code">
+          <div class="editor__gutter">
+            <span class="editor__number">1</span>
+            <span class="editor__number">2</span>
+            <span class="editor__number">3</span>
+          </div>
+          <textarea class="editor__input">.codepen {is: cool}</textarea>
+        </div>
+      </div>
+      <div class="editor">
+        <header class="editor__header">
+          <button class="button button--small editor__settings">⚙️</button>
+          <h3 class="editor__heading">JS</h3>
+          <button class="button button--small editor__settings">&#8964</button>
+        </header>
+        <div class="editor__code">
+          <div class="editor__gutter">
+            <span class="editor__number">1</span>
+          </div>
+          <textarea class="editor__input">const codepen='collest';</textarea>
+        </div>
+      </div>
+    </section>
+    <section class="preview">
+      <iframe src="https://css-tricks.com" frameborder="0"></iframe>
+    </section>
+    <footer class="settings">
+      <button class="button button--small button-black">Console</button>
+      <button class="button button--small button-black">Assets</button>
+      <button class="button button--small button-black">⌘</button>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
 </html>
