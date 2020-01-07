@@ -419,6 +419,12 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   grid-gap: 10px; }
+  @media (max-width: 767px) {
+    .pen {
+      -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+      grid-auto-flow: row;
+      justify-items: center; } }
 
 .preview {
   display: -ms-grid;
