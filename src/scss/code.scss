@@ -4,6 +4,10 @@
     // grid-template-columns: repeat(3, 1fr);
     background: #1b2b34;
 
+    @media (max-width:767px) {
+        grid-template-columns: repeat(auto-fill, minmax(590px, 1fr));
+    }
+
 }
 
 .editor__header {
