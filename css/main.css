@@ -313,6 +313,9 @@ template {
   -ms-grid-columns: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   background: #1b2b34; }
+  @media (max-width: 767px) {
+    .code {
+      grid-template-columns: repeat(auto-fill, minmax(590px, 1fr)); } }
 
 .editor__header {
   display: -ms-grid;
