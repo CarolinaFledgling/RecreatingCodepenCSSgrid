@@ -315,7 +315,8 @@ template {
   background: #1b2b34; }
   @media (max-width: 767px) {
     .code {
-      grid-template-columns: repeat(auto-fill, minmax(590px, 1fr)); } }
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr; } }
 
 .editor__header {
   display: -ms-grid;
@@ -334,6 +335,10 @@ template {
   display: grid;
   -ms-grid-rows: auto 1fr;
   grid-template-rows: auto 1fr; }
+  @media (max-width: 767px) {
+    .editor {
+      -ms-grid-rows: auto minmax(300px, 1fr);
+      grid-template-rows: auto minmax(300px, 1fr); } }
 
 .editor__code {
   display: -ms-grid;
@@ -385,6 +390,7 @@ html {
           box-sizing: inherit; }
 
 body {
+  padding: 5px;
   margin: 0; }
 
 h1,
@@ -421,10 +427,8 @@ h6 {
   grid-gap: 10px; }
   @media (max-width: 767px) {
     .pen {
-      -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
       grid-auto-flow: row;
-      justify-items: center; } }
+      justify-items: start; } }
 
 .preview {
   display: -ms-grid;
